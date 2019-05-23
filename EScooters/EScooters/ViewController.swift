@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let eScooterService = EScooterService()
+        eScooterService.fetchVehiclesList { (result) in
+            print(result)
+        }
     }
 
 
