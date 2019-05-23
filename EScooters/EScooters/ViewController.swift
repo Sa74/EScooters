@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var eScooterViewModel = EScooterViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        let eScooterService = EScooterService()
-        eScooterService.fetchVehiclesList { (result) in
-            print(result)
+        eScooterViewModel.updateHandler = { [weak self] in
+            print("Reload")
         }
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        eScooterViewModel.fetchVehicles()
+    }
 
 }
 
