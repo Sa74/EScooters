@@ -8,7 +8,7 @@
 
 import Foundation
 
-let apiEndPoint = "https://my-json-server.typicode.com/FlashScooters/Challenge/db"
+let apiEndPoint = "https://my-json-server.typicode.com/FlashScooters/Challenge/vehicles"
 
 enum Result {
     case success(Any)
@@ -43,11 +43,15 @@ class EScooterService {
                 if error != nil {
                     completion(Result.failure("Unable to download vehicle list \(error?.localizedDescription ??  "No data received")"))
                 } else {
-                    if let data = data {
-                        let response = String(data: data, encoding: String.Encoding.utf8)
-                        print(response as Any)
-                    } else {
-                        completion(Result.failure("No data received"))
+                    do {
+                        if let data = data {
+                            let eScooters = try JSONDecoder().decode([EScooter].self, from: data)
+                            completion(Result.success(eScooters))
+                        } else {
+                            completion(Result.failure("No data received"))
+                        }
+                    } catch {
+                        completion(Result.failure("Unable to fetch vehicle list. \(error)"))
                     }
                 }
             })

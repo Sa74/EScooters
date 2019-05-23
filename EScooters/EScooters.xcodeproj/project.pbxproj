@@ -15,6 +15,7 @@
 		5E39D1B72295B58F00EE6661 /* EScootersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1B62295B58F00EE6661 /* EScootersTests.swift */; };
 		5E39D1C22295B58F00EE6661 /* EScootersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1C12295B58F00EE6661 /* EScootersUITests.swift */; };
 		5E39D1D02297059C00EE6661 /* EScooterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1CF2297059C00EE6661 /* EScooterService.swift */; };
+		5E39D1D222970C1800EE6661 /* EScooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1D122970C1800EE6661 /* EScooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5E39D1C12295B58F00EE6661 /* EScootersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScootersUITests.swift; sourceTree = "<group>"; };
 		5E39D1C32295B58F00EE6661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E39D1CF2297059C00EE6661 /* EScooterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterService.swift; sourceTree = "<group>"; };
+		5E39D1D122970C1800EE6661 /* EScooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				5E39D1A12295B58D00EE6661 /* AppDelegate.swift */,
+				5E39D1D122970C1800EE6661 /* EScooter.swift */,
 				5E39D1CF2297059C00EE6661 /* EScooterService.swift */,
 				5E39D1A32295B58D00EE6661 /* ViewController.swift */,
 				5E39D1A52295B58D00EE6661 /* Main.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E39D1D02297059C00EE6661 /* EScooterService.swift in Sources */,
+				5E39D1D222970C1800EE6661 /* EScooter.swift in Sources */,
 				5E39D1A42295B58D00EE6661 /* ViewController.swift in Sources */,
 				5E39D1A22295B58D00EE6661 /* AppDelegate.swift in Sources */,
 			);
