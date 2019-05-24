@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-struct EScooter: Codable {
+struct EScooter: Codable, Equatable {
     let id: Int
     let name: String
     let description: String
@@ -25,6 +25,10 @@ struct EScooter: Codable {
         get {
             return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
+    }
+    
+    static func == (lhs: EScooter, rhs: EScooter) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

@@ -43,12 +43,7 @@ class EScooterMapViewController: UIViewController {
     
     func locateEScooters() {
         eScooterMapView.removeAnnotations(eScooterMapView.annotations)
-        let scootersCount = eScooterViewModel.getNumberOfScooters()
-        for i in 0...scootersCount-1 {
-            let eScooter = eScooterViewModel.getEScooter(atIndex: i)
-            let scooterPin = MapPin(eScooter.coordinate, title: eScooter.description, tag: i+1)
-            eScooterMapView.addAnnotation(scooterPin)
-        }
+        eScooterMapView.showAnnotations(eScooterViewModel.getAnnotations(), animated: true)
     }
     
     func centerMapToBerlin() {
@@ -60,7 +55,25 @@ class EScooterMapViewController: UIViewController {
 }
 
 extension EScooterMapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var scooterPin = mapView.dequeueReusableAnnotationView(withIdentifier: "ScooterPin")
+        if scooterPin == nil {
+            scooterPin = MKAnnotationView(annotation: annotation, reuseIdentifier: "ScooterPin")
+        }
+        scooterPin?.annotation = annotation
+        scooterPin?.isEnabled = true
+        scooterPin?.image = UIImage(named: "Pin")
+        return scooterPin
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print((view.annotation as? MapPin)?.tag as Any)
+        view.image = UIImage(named: "ScaledPin")
+        print("Selected \((view.annotation as? MapPin)?.tag as Any)")
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        view.image = UIImage(named: "Pin")
+        print("Deselected \((view.annotation as? MapPin)?.tag as Any)")
     }
 }
