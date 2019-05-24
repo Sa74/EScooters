@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E39D1A22295B58D00EE6661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1A12295B58D00EE6661 /* AppDelegate.swift */; };
-		5E39D1A42295B58D00EE6661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1A32295B58D00EE6661 /* ViewController.swift */; };
 		5E39D1A72295B58D00EE6661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D1A52295B58D00EE6661 /* Main.storyboard */; };
 		5E39D1A92295B58F00EE6661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D1A82295B58F00EE6661 /* Assets.xcassets */; };
 		5E39D1AC2295B58F00EE6661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D1AA2295B58F00EE6661 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,7 @@
 		5E39D1D02297059C00EE6661 /* EScooterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1CF2297059C00EE6661 /* EScooterService.swift */; };
 		5E39D1D222970C1800EE6661 /* EScooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1D122970C1800EE6661 /* EScooter.swift */; };
 		5E39D1D42297100800EE6661 /* EScooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1D32297100800EE6661 /* EScooterViewModel.swift */; };
+		5E39D1D6229712BB00EE6661 /* EScooterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1D5229712BB00EE6661 /* EScooterMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		5E39D19E2295B58D00EE6661 /* EScooters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EScooters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E39D1A12295B58D00EE6661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E39D1A32295B58D00EE6661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E39D1A62295B58D00EE6661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E39D1A82295B58F00EE6661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E39D1AB2295B58F00EE6661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		5E39D1CF2297059C00EE6661 /* EScooterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterService.swift; sourceTree = "<group>"; };
 		5E39D1D122970C1800EE6661 /* EScooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooter.swift; sourceTree = "<group>"; };
 		5E39D1D32297100800EE6661 /* EScooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterViewModel.swift; sourceTree = "<group>"; };
+		5E39D1D5229712BB00EE6661 /* EScooterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				5E39D1D122970C1800EE6661 /* EScooter.swift */,
 				5E39D1CF2297059C00EE6661 /* EScooterService.swift */,
 				5E39D1D32297100800EE6661 /* EScooterViewModel.swift */,
-				5E39D1A32295B58D00EE6661 /* ViewController.swift */,
+				5E39D1D5229712BB00EE6661 /* EScooterMapViewController.swift */,
 				5E39D1A52295B58D00EE6661 /* Main.storyboard */,
 				5E39D1A82295B58F00EE6661 /* Assets.xcassets */,
 				5E39D1AA2295B58F00EE6661 /* LaunchScreen.storyboard */,
@@ -266,9 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E39D1D02297059C00EE6661 /* EScooterService.swift in Sources */,
+				5E39D1D6229712BB00EE6661 /* EScooterMapViewController.swift in Sources */,
 				5E39D1D42297100800EE6661 /* EScooterViewModel.swift in Sources */,
 				5E39D1D222970C1800EE6661 /* EScooter.swift in Sources */,
-				5E39D1A42295B58D00EE6661 /* ViewController.swift in Sources */,
 				5E39D1A22295B58D00EE6661 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

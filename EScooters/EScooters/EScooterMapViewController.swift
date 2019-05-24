@@ -1,15 +1,18 @@
 //
-//  ViewController.swift
+//  EScooterMapViewController.swift
 //  EScooters
 //
-//  Created by Sasi Moorthy on 22/05/19.
+//  Created by Sasi Moorthy on 23/05/19.
 //  Copyright © 2019 Sasi Moorthy. All rights reserved.
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
-
+class EScooterMapViewController: UIViewController {
+    
+    @IBOutlet weak var eScooterMapView: MKMapView!
+    
     var eScooterViewModel = EScooterViewModel()
     
     override func viewDidLoad() {
@@ -24,6 +27,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         eScooterViewModel.fetchVehicles()
     }
-
+    
 }
 
+extension EScooterMapViewController: MKMapViewDelegate {
+    
+}
