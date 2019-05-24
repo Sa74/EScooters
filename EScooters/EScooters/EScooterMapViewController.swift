@@ -43,14 +43,7 @@ class EScooterMapViewController: UIViewController {
     
     func locateEScooters() {
         eScooterMapView.removeAnnotations(eScooterMapView.annotations)
-        let scootersCount = eScooterViewModel.getNumberOfScooters()
-        var annotations = [MapPin]()
-        for i in 0...scootersCount-1 {
-            let eScooter = eScooterViewModel.getEScooter(atIndex: i)
-            let scooterPin = MapPin(eScooter.coordinate, title: eScooter.description, tag: i+1)
-            annotations.append(scooterPin)
-        }
-        eScooterMapView.showAnnotations(annotations, animated: true)
+        eScooterMapView.showAnnotations(eScooterViewModel.getAnnotations(), animated: true)
     }
     
     func centerMapToBerlin() {

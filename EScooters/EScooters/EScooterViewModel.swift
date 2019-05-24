@@ -53,4 +53,16 @@ extension EScooterViewModel {
         }
         return eScooter
     }
+    
+    func getAnnotations() -> [MapPin] {
+        guard let eScooters = eScooters else {
+            return []
+        }
+        var annotations = [MapPin]()
+        for eScooter in eScooters {
+            let scooterPin = MapPin(eScooter.coordinate, title: eScooter.description, tag: eScooters.firstIndex(of: eScooter)!)
+            annotations.append(scooterPin)
+        }
+        return annotations
+    }
 }
