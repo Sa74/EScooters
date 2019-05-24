@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct EScooter: Codable {
     let id: Int
@@ -19,5 +20,11 @@ struct EScooter: Codable {
     let price: Int
     let priceTime: Int
     let currency: String
+    
+    var coordinate: CLLocationCoordinate2D {
+        get {
+            return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        }
+    }
 }
 

@@ -42,4 +42,15 @@ extension EScooterViewModel {
             }
         }
     }
+    
+    func getNumberOfScooters() -> Int {
+        return eScooters?.count ?? 0
+    }
+    
+    func getEScooter(atIndex index: Int) -> EScooter {
+        guard let eScooter = eScooters?[index] else {
+            fatalError("Invalid index for EScooters")
+        }
+        return eScooter
+    }
 }
