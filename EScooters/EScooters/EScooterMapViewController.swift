@@ -44,11 +44,13 @@ class EScooterMapViewController: UIViewController {
     func locateEScooters() {
         eScooterMapView.removeAnnotations(eScooterMapView.annotations)
         let scootersCount = eScooterViewModel.getNumberOfScooters()
+        var annotations = [MapPin]()
         for i in 0...scootersCount-1 {
             let eScooter = eScooterViewModel.getEScooter(atIndex: i)
             let scooterPin = MapPin(eScooter.coordinate, title: eScooter.description, tag: i+1)
-            eScooterMapView.addAnnotation(scooterPin)
+            annotations.append(scooterPin)
         }
+        eScooterMapView.showAnnotations(annotations, animated: true)
     }
     
     func centerMapToBerlin() {
@@ -74,10 +76,11 @@ extension EScooterMapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         view.image = UIImage(named: "ScaledPin")
-        print((view.annotation as? MapPin)?.tag as Any)
+        print("Selected \((view.annotation as? MapPin)?.tag as Any)")
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         view.image = UIImage(named: "Pin")
+        print("Deselected \((view.annotation as? MapPin)?.tag as Any)")
     }
 }
