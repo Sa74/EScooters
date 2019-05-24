@@ -60,7 +60,24 @@ class EScooterMapViewController: UIViewController {
 }
 
 extension EScooterMapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var scooterPin = mapView.dequeueReusableAnnotationView(withIdentifier: "ScooterPin")
+        if scooterPin == nil {
+            scooterPin = MKAnnotationView(annotation: annotation, reuseIdentifier: "ScooterPin")
+        }
+        scooterPin?.annotation = annotation
+        scooterPin?.isEnabled = true
+        scooterPin?.image = UIImage(named: "Pin")
+        return scooterPin
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        view.image = UIImage(named: "ScaledPin")
         print((view.annotation as? MapPin)?.tag as Any)
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        view.image = UIImage(named: "Pin")
     }
 }
