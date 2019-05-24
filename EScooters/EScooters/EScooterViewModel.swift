@@ -65,4 +65,14 @@ extension EScooterViewModel {
         }
         return annotations
     }
+    
+    func getEScooterDetailModel(forIndex index: Int) -> EScooterDetailModel {
+        guard let eScooter = eScooters?[index] else {
+            fatalError("Invalid index for EScooterDetailModel")
+        }
+        
+        let priceDisplay = "\(eScooter.currency)\(eScooter.price) / \(eScooter.priceTime)min"
+        let eScooterDetailModel = EScooterDetailModel(eScooter.name, description: eScooter.description, priceDisplay: priceDisplay, batteryLevel: eScooter.batteryLevel)
+        return eScooterDetailModel
+    }
 }

@@ -32,3 +32,17 @@ struct EScooter: Codable, Equatable {
     }
 }
 
+struct EScooterDetailModel: Codable {
+    let title: String
+    let description: String
+    let priceDisplay: String
+    let batteryLevel: Int
+    
+    init(_ title: String, description: String, priceDisplay: String, batteryLevel: Int) {
+        self.title = title
+        self.description = description
+        self.priceDisplay = priceDisplay
+        self.batteryLevel = batteryLevel
+    }
+}
+
