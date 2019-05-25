@@ -85,7 +85,6 @@ class EScooterDetailView: UIView {
         bookButton.layer.cornerRadius = bookButton.frame.height / 2
         bookButton.setTitleColor(UIColor.white, for: .normal)
         bookButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        
     }
     
     func loadScooterDetails(_ eScooterDetail: EScooterDetailModel) {
