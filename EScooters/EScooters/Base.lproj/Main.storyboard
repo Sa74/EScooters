@@ -124,21 +124,32 @@
                                     <outlet property="titleLabel" destination="Smg-pr-xdu" id="19k-bg-s7Y"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1f-Bt-ftS" customClass="ScooterLoaderView" customModule="EScooters" customModuleProvider="target">
+                                <rect key="frame" x="182" y="802" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GGR-S7-vyr"/>
+                                    <constraint firstAttribute="height" constant="50" id="xjU-I3-UFt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eAe-ZK-bdx" firstAttribute="top" secondItem="g1f-Bt-ftS" secondAttribute="bottom" constant="10" id="0Jm-82-GXY"/>
                             <constraint firstItem="EaB-Ey-ut2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="6Gy-EX-1Zu"/>
                             <constraint firstItem="EaB-Ey-ut2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ln9-qi-XEG"/>
                             <constraint firstItem="EaB-Ey-ut2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TKL-PT-lmJ"/>
                             <constraint firstItem="Dih-xl-DIZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="UQH-aG-Kez"/>
                             <constraint firstItem="EaB-Ey-ut2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cjh-fH-6Ja"/>
                             <constraint firstItem="eAe-ZK-bdx" firstAttribute="top" secondItem="Dih-xl-DIZ" secondAttribute="bottom" constant="70" id="fG1-Oh-xFJ"/>
+                            <constraint firstItem="g1f-Bt-ftS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNQ-Jv-AeK"/>
                             <constraint firstItem="Dih-xl-DIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yjY-yb-yBq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="eScooterDetailView" destination="Dih-xl-DIZ" id="WXU-6S-EUO"/>
                         <outlet property="eScooterDetailViewBottom" destination="fG1-Oh-xFJ" id="F7i-TY-7Gu"/>
+                        <outlet property="eScooterLoaderView" destination="g1f-Bt-ftS" id="FJI-SO-wEo"/>
                         <outlet property="eScooterMapView" destination="EaB-Ey-ut2" id="lwr-6z-89L"/>
                     </connections>
                 </viewController>
