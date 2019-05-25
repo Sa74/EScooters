@@ -78,6 +78,7 @@ class EScooterDetailView: UIView {
         priceLabel.textColor = .black
         percentageLabel.text = ""
         percentageLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        percentageLabel.textAlignment = .right
         priceLabel.textColor = .black
         
         bookButton.backgroundColor = UIColor.blue
