@@ -13,7 +13,7 @@ class ScooterLoaderView: UIView {
     private let containerView: UIView = UIView()
     private let scooterImageView = UIImageView(image: UIImage(named: "Loader"))
     private let scooterImageView2 = UIImageView(image: UIImage(named: "Loader"))
-    private let loadingLabel: UILabel = UILabel()
+    let loadingLabel: UILabel = UILabel()
     
     override func awakeFromNib() {
         
