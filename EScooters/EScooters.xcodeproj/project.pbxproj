@@ -117,16 +117,10 @@
 		5E39D1A02295B58D00EE6661 /* EScooters */ = {
 			isa = PBXGroup;
 			children = (
+				5ED8E80422996E1200F6DB61 /* Classes */,
+				5ED8E80322996DCC00F6DB61 /* View */,
+				5ED8E80222996DBD00F6DB61 /* Utilities */,
 				5E39D1A12295B58D00EE6661 /* AppDelegate.swift */,
-				5E39D1D122970C1800EE6661 /* EScooter.swift */,
-				5E39D1CF2297059C00EE6661 /* EScooterService.swift */,
-				5E39D1D32297100800EE6661 /* EScooterViewModel.swift */,
-				5ED8E7F822992CBE00F6DB61 /* MapPin.swift */,
-				5ED8E7FA229948F400F6DB61 /* WarningManager.swift */,
-				5ED8E7F42299060300F6DB61 /* TimeFormatter.swift */,
-				5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */,
-				5ED8E7F22298548700F6DB61 /* EScooterDetailView.swift */,
-				5E39D1D5229712BB00EE6661 /* EScooterMapViewController.swift */,
 				5E39D1A52295B58D00EE6661 /* Main.storyboard */,
 				5E39D1A82295B58F00EE6661 /* Assets.xcassets */,
 				5E39D1AA2295B58F00EE6661 /* LaunchScreen.storyboard */,
@@ -153,6 +147,36 @@
 				5E39D1C32295B58F00EE6661 /* Info.plist */,
 			);
 			path = EScootersUITests;
+			sourceTree = "<group>";
+		};
+		5ED8E80222996DBD00F6DB61 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5ED8E7FA229948F400F6DB61 /* WarningManager.swift */,
+				5ED8E7F42299060300F6DB61 /* TimeFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5ED8E80322996DCC00F6DB61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5ED8E7F822992CBE00F6DB61 /* MapPin.swift */,
+				5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */,
+				5ED8E7F22298548700F6DB61 /* EScooterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5ED8E80422996E1200F6DB61 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5E39D1D122970C1800EE6661 /* EScooter.swift */,
+				5E39D1CF2297059C00EE6661 /* EScooterService.swift */,
+				5E39D1D32297100800EE6661 /* EScooterViewModel.swift */,
+				5E39D1D5229712BB00EE6661 /* EScooterMapViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
