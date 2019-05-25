@@ -37,7 +37,7 @@ extension EScooterViewModel {
                 self?.eScooters = eScooters
                 
             case .failure(let error):
-                print(error)
+                WarningManager.createAndPushWarning(message: "\(error)", cancel: "Ok")
             }
             self?.updateHandler()
         }
