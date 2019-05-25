@@ -28,6 +28,7 @@
 		5ED8E808229971B500F6DB61 /* MapPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E807229971B500F6DB61 /* MapPinTests.swift */; };
 		5ED8E80A229974FE00F6DB61 /* EScooterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E809229974FE00F6DB61 /* EScooterViewModelTests.swift */; };
 		5ED8E80C2299824100F6DB61 /* ScooterLoaderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E80B2299824100F6DB61 /* ScooterLoaderViewTests.swift */; };
+		5ED8E80E229987AA00F6DB61 /* EScooterDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E80D229987AA00F6DB61 /* EScooterDetailViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5ED8E807229971B500F6DB61 /* MapPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPinTests.swift; sourceTree = "<group>"; };
 		5ED8E809229974FE00F6DB61 /* EScooterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterViewModelTests.swift; sourceTree = "<group>"; };
 		5ED8E80B2299824100F6DB61 /* ScooterLoaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterLoaderViewTests.swift; sourceTree = "<group>"; };
+		5ED8E80D229987AA00F6DB61 /* EScooterDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterDetailViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				5ED8E7FE229965E500F6DB61 /* response.json */,
 				5ED8E7FC2299657300F6DB61 /* EScooterTests.swift */,
 				5ED8E80B2299824100F6DB61 /* ScooterLoaderViewTests.swift */,
+				5ED8E80D229987AA00F6DB61 /* EScooterDetailViewTests.swift */,
 				5ED8E807229971B500F6DB61 /* MapPinTests.swift */,
 				5ED8E80522996EF700F6DB61 /* TimeFormatterTests.swift */,
 				5ED8E80022996B8D00F6DB61 /* EScooterServiceTests.swift */,
@@ -345,6 +348,7 @@
 				5ED8E80A229974FE00F6DB61 /* EScooterViewModelTests.swift in Sources */,
 				5ED8E7FD2299657300F6DB61 /* EScooterTests.swift in Sources */,
 				5ED8E80622996EF700F6DB61 /* TimeFormatterTests.swift in Sources */,
+				5ED8E80E229987AA00F6DB61 /* EScooterDetailViewTests.swift in Sources */,
 				5ED8E80122996B8D00F6DB61 /* EScooterServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
