@@ -66,3 +66,5 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+EScooters/EScooters.xcodeproj/xcshareddata/xcschemes/EScooters.xcscheme
+EScooters/EScooters.xcodeproj/xcshareddata/xcschemes/EScootersTests.xcscheme
