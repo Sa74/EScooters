@@ -10,6 +10,20 @@ import UIKit
 
 class BatteryView: UIView {
     
+    @IBOutlet weak var batteryHead: UIView!
+    
+    override func awakeFromNib() {
+        layer.cornerRadius = 2.0
+        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderWidth = 2.0
+        backgroundColor = .white
+        
+        batteryHead.layer.cornerRadius = 1.0
+        batteryHead.layer.borderColor = UIColor.darkGray.cgColor
+        batteryHead.layer.borderWidth = 2.0
+        batteryHead.backgroundColor = .white
+    }
+    
     func showPercentage(_ percentage: Int) {
         resetPercentage()
         layer.borderWidth = 0.5

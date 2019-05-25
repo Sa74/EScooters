@@ -52,12 +52,27 @@
                                         <rect key="frame" x="283" y="17" width="80" height="22"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woB-8a-XfU" customClass="BatteryView" customModule="EScooters" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="3.5" width="44" height="15"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="32" y="3.5" width="40" height="15"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EyZ-Oy-0RG">
+                                                        <rect key="frame" x="40" y="3.5" width="2" height="8"/>
+                                                        <color key="backgroundColor" red="0.1411641538143158" green="0.051360160112380981" blue="0.89280253648757935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="2" id="Fyd-Yy-xL8"/>
+                                                            <constraint firstAttribute="height" constant="8" id="VsK-zG-55M"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="EyZ-Oy-0RG" firstAttribute="centerY" secondItem="woB-8a-XfU" secondAttribute="centerY" id="La6-rR-3kb"/>
                                                     <constraint firstAttribute="height" constant="15" id="NSi-xS-VEr"/>
-                                                    <constraint firstAttribute="width" constant="44" id="lAb-37-SoF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EyZ-Oy-0RG" secondAttribute="trailing" constant="-2" id="Tir-1D-RmR"/>
+                                                    <constraint firstAttribute="width" constant="40" id="lAb-37-SoF"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="batteryHead" destination="EyZ-Oy-0RG" id="Srm-lN-UVL"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCj-N5-TqS">
                                                 <rect key="frame" x="0.0" y="0.0" width="31" height="22"/>
@@ -77,7 +92,7 @@
                                             <constraint firstAttribute="height" constant="22" id="TPR-zm-Aez"/>
                                             <constraint firstItem="SCj-N5-TqS" firstAttribute="centerY" secondItem="MgK-7D-Yby" secondAttribute="centerY" id="XEw-zx-jDn"/>
                                             <constraint firstItem="woB-8a-XfU" firstAttribute="centerY" secondItem="MgK-7D-Yby" secondAttribute="centerY" id="nfe-dT-60Q"/>
-                                            <constraint firstAttribute="trailing" secondItem="woB-8a-XfU" secondAttribute="trailing" constant="4" id="sKZ-CD-qCx"/>
+                                            <constraint firstAttribute="trailing" secondItem="woB-8a-XfU" secondAttribute="trailing" constant="8" id="sKZ-CD-qCx"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFE-1E-Hy3">
