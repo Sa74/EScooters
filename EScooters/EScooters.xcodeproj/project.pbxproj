@@ -21,6 +21,7 @@
 		5ED8E7F52299060300F6DB61 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7F42299060300F6DB61 /* TimeFormatter.swift */; };
 		5ED8E7F7229918A700F6DB61 /* ScooterLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */; };
 		5ED8E7F922992CBE00F6DB61 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7F822992CBE00F6DB61 /* MapPin.swift */; };
+		5ED8E7FB229948F400F6DB61 /* WarningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7FA229948F400F6DB61 /* WarningManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5ED8E7F42299060300F6DB61 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterLoaderView.swift; sourceTree = "<group>"; };
 		5ED8E7F822992CBE00F6DB61 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		5ED8E7FA229948F400F6DB61 /* WarningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				5E39D1CF2297059C00EE6661 /* EScooterService.swift */,
 				5E39D1D32297100800EE6661 /* EScooterViewModel.swift */,
 				5ED8E7F822992CBE00F6DB61 /* MapPin.swift */,
+				5ED8E7FA229948F400F6DB61 /* WarningManager.swift */,
 				5ED8E7F42299060300F6DB61 /* TimeFormatter.swift */,
 				5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */,
 				5ED8E7F22298548700F6DB61 /* EScooterDetailView.swift */,
@@ -279,6 +282,7 @@
 			files = (
 				5E39D1D02297059C00EE6661 /* EScooterService.swift in Sources */,
 				5ED8E7F32298548700F6DB61 /* EScooterDetailView.swift in Sources */,
+				5ED8E7FB229948F400F6DB61 /* WarningManager.swift in Sources */,
 				5ED8E7F52299060300F6DB61 /* TimeFormatter.swift in Sources */,
 				5ED8E7F922992CBE00F6DB61 /* MapPin.swift in Sources */,
 				5ED8E7F7229918A700F6DB61 /* ScooterLoaderView.swift in Sources */,

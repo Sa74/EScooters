@@ -111,6 +111,9 @@
                                             <constraint firstAttribute="height" constant="30" id="euy-em-tP1"/>
                                         </constraints>
                                         <state key="normal" title="Book"/>
+                                        <connections>
+                                            <action selector="bookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0YC-PY-BO0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

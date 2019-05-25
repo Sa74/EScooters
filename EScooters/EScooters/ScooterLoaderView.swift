@@ -46,7 +46,6 @@ class ScooterLoaderView: UIView {
                 loaderView.scooterImageView2.frame = loaderView.scooterImageView2.frame.offsetBy(dx: loaderView.scooterImageView2.frame.size.width, dy: 0.0)
             }
         }, completion: nil)
-        
     }
     
     func stopAnimating() {

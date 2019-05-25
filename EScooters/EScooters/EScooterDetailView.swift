@@ -54,7 +54,6 @@ class EScooterDetailView: UIView {
     @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var bookButton: UIButton!
     
-    
     override func awakeFromNib() {
         
         layer.cornerRadius = 15

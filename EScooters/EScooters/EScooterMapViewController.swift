@@ -58,6 +58,10 @@ class EScooterMapViewController: UIViewController {
         eScooterLoaderView.startAnimating()
         eScooterViewModel.fetchVehicles()
     }
+    
+    @IBAction func bookButtonTapped(_ sender: Any) {
+        WarningManager.createAndPushWarning(message: "You EScooter is booked. Enjoy your ride!", cancel: "Ok")
+    }
 }
 
 
