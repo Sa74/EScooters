@@ -10,15 +10,23 @@ import UIKit
 
 class ScooterLoaderView: UIView {
     
-    let containerView: UIView = UIView()
-    let scooterImageView = UIImageView(image: UIImage(named: "Loader"))
-    let scooterImageView2 = UIImageView(image: UIImage(named: "Loader"))
+    private let containerView: UIView = UIView()
+    private let scooterImageView = UIImageView(image: UIImage(named: "Loader"))
+    private let scooterImageView2 = UIImageView(image: UIImage(named: "Loader"))
+    private let loadingLabel: UILabel = UILabel()
     
     override func awakeFromNib() {
         
         containerView.frame = bounds
         containerView.backgroundColor = UIColor.clear
         containerView.clipsToBounds = true
+        
+        loadingLabel.frame = CGRect(origin: CGPoint(x: 0, y: bounds.height - 10), size: CGSize(width: bounds.width, height: 8))
+        loadingLabel.textColor = .white
+        loadingLabel.font = UIFont.boldSystemFont(ofSize: 9)
+        loadingLabel.text = "FIND"
+        loadingLabel.textAlignment = .center
+        containerView.addSubview(loadingLabel)
         
         setImageViewInitialFrames()
         containerView.addSubview(scooterImageView)
@@ -40,6 +48,7 @@ class ScooterLoaderView: UIView {
     }
     
     func startAnimating() {
+        loadingLabel.text = "FINDING"
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.repeat, .curveLinear], animations: { [weak self] in
             if let loaderView: ScooterLoaderView = self {
                 loaderView.scooterImageView.frame = loaderView.scooterImageView.frame.offsetBy(dx: loaderView.scooterImageView.frame.size.width, dy: 0.0)
@@ -49,6 +58,7 @@ class ScooterLoaderView: UIView {
     }
     
     func stopAnimating() {
+        loadingLabel.text = "FIND"
         scooterImageView.layer.removeAllAnimations()
         scooterImageView2.layer.removeAllAnimations()
         UIView.animate(withDuration: 0.25, animations: { [weak self] in
