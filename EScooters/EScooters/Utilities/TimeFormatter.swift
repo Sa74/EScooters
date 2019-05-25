@@ -18,7 +18,7 @@ class TimeFormatter {
     class func getTimeString(_ hour:Int, minute: Int) -> String {
         let hourString = (hour > 0) ? "\(hour)h" : ""
         let minuteString = (minute > 0) ? "\(minute)min" : ""
-        return "\(hourString) \(minuteString)"
+        return "\(hourString) \(minuteString)".trimmingCharacters(in: .whitespaces)
     }
     
     class func minutesToHoursMinutes (minutes : Int) -> (Int, Int) {
