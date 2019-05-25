@@ -103,17 +103,20 @@ extension EScooterMapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
         view.image = UIImage(named: "ScaledPin")
         guard let annotaion = view.annotation as? MapPin else {
             fatalError("Invalid annotation found")
         }
-        eScooterDetailView.loadScooterDetails(eScooterViewModel.getEScooterDetailModel(forIndex: annotaion.tag))
+        
+        let eScooterDetailModel = eScooterViewModel.getEScooterDetailModel(forIndex: annotaion.tag)
+        eScooterDetailView.loadScooterDetails(eScooterDetailModel)
         if (selectedAnnotation == nil) {
             displayScooterDetailView(true, delayed: true)
         }
+        
         selectedAnnotation = annotaion
         centerMap(toCoordinate: view.annotation!.coordinate)
-        
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
