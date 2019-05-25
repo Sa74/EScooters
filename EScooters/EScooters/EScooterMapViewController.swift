@@ -41,7 +41,6 @@ class EScooterMapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        centerMapToBerlin()
         eScooterViewModel.fetchVehicles()
     }
     
@@ -50,11 +49,12 @@ class EScooterMapViewController: UIViewController {
         eScooterMapView.showAnnotations(eScooterViewModel.getAnnotations(), animated: true)
     }
     
-    func centerMapToBerlin() {
-        // Center map in Berlin area since vehicle data is present in those regions alone
-        let coordinate = CLLocationCoordinate2D(latitude: 52.52000, longitude: 13.4050)
-        let mapRegion = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-        eScooterMapView.setRegion(mapRegion, animated: true)
+    func centerMap(toCoordinate coordinate: CLLocationCoordinate2D) {
+        let point = MKMapPoint(coordinate)
+        var rect = eScooterMapView.visibleMapRect
+        rect.origin.x = point.x - rect.size.width * 0.5
+        rect.origin.y = point.y - rect.size.height * 0.5
+        eScooterMapView.setVisibleMapRect(rect, animated: true)
     }
 }
 
@@ -106,6 +106,7 @@ extension EScooterMapViewController: MKMapViewDelegate {
             displayScooterDetailView(true, delayed: true)
         }
         selectedScooterIndex = selectedIndex
+        centerMap(toCoordinate: view.annotation!.coordinate)
         
     }
     
@@ -121,6 +122,7 @@ extension EScooterMapViewController: MKMapViewDelegate {
         if selectedScooterIndex == deselctedIndex {
             hideScooterDetailView(true)
             selectedScooterIndex = -1
+            eScooterMapView.showAnnotations(eScooterMapView.annotations, animated: true)
         }
     }
 }

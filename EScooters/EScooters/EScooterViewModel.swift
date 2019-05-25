@@ -71,7 +71,8 @@ extension EScooterViewModel {
             fatalError("Invalid index for EScooterDetailModel")
         }
         
-        let priceDisplay = "\(eScooter.currency)\(eScooter.price) / \(eScooter.priceTime)min"
+        let timeString = TimeFormatter.minutesToHoursMinutesString(minutes: eScooter.priceTime)
+        let priceDisplay = "\(eScooter.currency)\(eScooter.price) / \(timeString)"
         let eScooterDetailModel = EScooterDetailModel(eScooter.name, description: eScooter.description, priceDisplay: priceDisplay, batteryLevel: eScooter.batteryLevel)
         return eScooterDetailModel
     }
