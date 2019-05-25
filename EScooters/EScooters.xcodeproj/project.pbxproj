@@ -11,7 +11,6 @@
 		5E39D1A72295B58D00EE6661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D1A52295B58D00EE6661 /* Main.storyboard */; };
 		5E39D1A92295B58F00EE6661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D1A82295B58F00EE6661 /* Assets.xcassets */; };
 		5E39D1AC2295B58F00EE6661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D1AA2295B58F00EE6661 /* LaunchScreen.storyboard */; };
-		5E39D1B72295B58F00EE6661 /* EScootersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1B62295B58F00EE6661 /* EScootersTests.swift */; };
 		5E39D1C22295B58F00EE6661 /* EScootersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1C12295B58F00EE6661 /* EScootersUITests.swift */; };
 		5E39D1D02297059C00EE6661 /* EScooterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1CF2297059C00EE6661 /* EScooterService.swift */; };
 		5E39D1D222970C1800EE6661 /* EScooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D1D122970C1800EE6661 /* EScooter.swift */; };
@@ -22,6 +21,8 @@
 		5ED8E7F7229918A700F6DB61 /* ScooterLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */; };
 		5ED8E7F922992CBE00F6DB61 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7F822992CBE00F6DB61 /* MapPin.swift */; };
 		5ED8E7FB229948F400F6DB61 /* WarningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7FA229948F400F6DB61 /* WarningManager.swift */; };
+		5ED8E7FD2299657300F6DB61 /* EScooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E7FC2299657300F6DB61 /* EScooterTests.swift */; };
+		5ED8E7FF229965E500F6DB61 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8E7FE229965E500F6DB61 /* response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,6 @@
 		5E39D1AB2295B58F00EE6661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E39D1AD2295B58F00EE6661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E39D1B22295B58F00EE6661 /* EScootersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EScootersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E39D1B62295B58F00EE6661 /* EScootersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScootersTests.swift; sourceTree = "<group>"; };
 		5E39D1B82295B58F00EE6661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E39D1BD2295B58F00EE6661 /* EScootersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EScootersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E39D1C12295B58F00EE6661 /* EScootersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScootersUITests.swift; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		5ED8E7F6229918A700F6DB61 /* ScooterLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterLoaderView.swift; sourceTree = "<group>"; };
 		5ED8E7F822992CBE00F6DB61 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		5ED8E7FA229948F400F6DB61 /* WarningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningManager.swift; sourceTree = "<group>"; };
+		5ED8E7FC2299657300F6DB61 /* EScooterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterTests.swift; sourceTree = "<group>"; };
+		5ED8E7FE229965E500F6DB61 /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,8 @@
 		5E39D1B52295B58F00EE6661 /* EScootersTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E39D1B62295B58F00EE6661 /* EScootersTests.swift */,
+				5ED8E7FE229965E500F6DB61 /* response.json */,
+				5ED8E7FC2299657300F6DB61 /* EScooterTests.swift */,
 				5E39D1B82295B58F00EE6661 /* Info.plist */,
 			);
 			path = EScootersTests;
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED8E7FF229965E500F6DB61 /* response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E39D1B72295B58F00EE6661 /* EScootersTests.swift in Sources */,
+				5ED8E7FD2299657300F6DB61 /* EScooterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
