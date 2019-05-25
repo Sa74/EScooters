@@ -9,27 +9,15 @@
 import UIKit
 import MapKit
 
-class MapPin: NSObject, MKAnnotation {
-    let coordinate: CLLocationCoordinate2D
-    let title: String?
-    let tag: Int
-    
-    init(_ coordinate: CLLocationCoordinate2D, title: String, tag: Int) {
-        self.coordinate = coordinate
-        self.title = title
-        self.tag = tag
-        super.init()
-    }
-}
-
 class EScooterMapViewController: UIViewController {
     
     @IBOutlet weak var eScooterMapView: MKMapView!
     @IBOutlet weak var eScooterDetailView: EScooterDetailView!
     @IBOutlet weak var eScooterDetailViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var eScooterLoaderView: ScooterLoaderView!
     
     var eScooterViewModel = EScooterViewModel()
-    var selectedScooterIndex: Int = -1
+    var selectedAnnotation: MapPin?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +25,11 @@ class EScooterMapViewController: UIViewController {
             self?.locateEScooters()
         }
         hideScooterDetailView(false)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scooterLoaderViewTapped))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        eScooterLoaderView.addGestureRecognizer(tapGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +38,7 @@ class EScooterMapViewController: UIViewController {
     }
     
     func locateEScooters() {
+        eScooterLoaderView.stopAnimating()
         eScooterMapView.removeAnnotations(eScooterMapView.annotations)
         eScooterMapView.showAnnotations(eScooterViewModel.getAnnotations(), animated: true)
     }
@@ -56,19 +50,27 @@ class EScooterMapViewController: UIViewController {
         rect.origin.y = point.y - rect.size.height * 0.5
         eScooterMapView.setVisibleMapRect(rect, animated: true)
     }
+    
+    @objc func scooterLoaderViewTapped() {
+        if let annotation = selectedAnnotation {
+            eScooterMapView.deselectAnnotation(annotation, animated: true)
+        }
+        eScooterLoaderView.startAnimating()
+        eScooterViewModel.fetchVehicles()
+    }
 }
 
 
 extension EScooterMapViewController {
     
     func displayScooterDetailView(_ animated: Bool, delayed: Bool) {
-        let duration = (animated) ? 0.5 : 0
-        let delay = (delayed) ? 0.6 : 0
+        let duration = (animated) ? 0.25 : 0
+        let delay = (delayed) ? 0.4 : 0
         translateScooterDetailView(duration, delay: delay, bottom: 70, transform: CGAffineTransform(scaleX: 1.0, y: 1.0))
     }
     
     func hideScooterDetailView(_ animated: Bool) {
-        let duration = (animated) ? 0.5 : 0
+        let duration = (animated) ? 0.25 : 0
         translateScooterDetailView(duration, delay: 0, bottom: -50, transform: CGAffineTransform(scaleX: 0.1, y: 0.1))
     }
     
@@ -98,14 +100,14 @@ extension EScooterMapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         view.image = UIImage(named: "ScaledPin")
-        guard let selectedIndex = (view.annotation as? MapPin)?.tag else {
-            fatalError("Invalid annotation index found")
+        guard let annotaion = view.annotation as? MapPin else {
+            fatalError("Invalid annotation found")
         }
-        eScooterDetailView.loadScooterDetails(eScooterViewModel.getEScooterDetailModel(forIndex: selectedIndex))
-        if (selectedScooterIndex == -1) {
+        eScooterDetailView.loadScooterDetails(eScooterViewModel.getEScooterDetailModel(forIndex: annotaion.tag))
+        if (selectedAnnotation == nil) {
             displayScooterDetailView(true, delayed: true)
         }
-        selectedScooterIndex = selectedIndex
+        selectedAnnotation = annotaion
         centerMap(toCoordinate: view.annotation!.coordinate)
         
     }
@@ -118,10 +120,12 @@ extension EScooterMapViewController: MKMapViewDelegate {
     }
     
     func delayedDeselect(view: MKAnnotationView) {
-        let deselctedIndex = (view.annotation as? MapPin)?.tag
-        if selectedScooterIndex == deselctedIndex {
+        guard let annotaion = view.annotation as? MapPin else {
+            fatalError("Invalid annotation found")
+        }
+        if selectedAnnotation == annotaion {
             hideScooterDetailView(true)
-            selectedScooterIndex = -1
+            selectedAnnotation = nil
             eScooterMapView.showAnnotations(eScooterMapView.annotations, animated: true)
         }
     }

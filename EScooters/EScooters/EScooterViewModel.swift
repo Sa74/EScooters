@@ -35,11 +35,11 @@ extension EScooterViewModel {
                     fatalError("Invalid response from EScooterService")
                 }
                 self?.eScooters = eScooters
-                self?.updateHandler()
                 
             case .failure(let error):
                 print(error)
             }
+            self?.updateHandler()
         }
     }
     
