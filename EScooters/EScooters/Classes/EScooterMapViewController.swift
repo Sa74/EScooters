@@ -85,7 +85,6 @@ extension EScooterMapViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
-    
 }
 
 
