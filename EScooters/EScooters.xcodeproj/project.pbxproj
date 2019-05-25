@@ -26,6 +26,7 @@
 		5ED8E80122996B8D00F6DB61 /* EScooterServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E80022996B8D00F6DB61 /* EScooterServiceTests.swift */; };
 		5ED8E80622996EF700F6DB61 /* TimeFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E80522996EF700F6DB61 /* TimeFormatterTests.swift */; };
 		5ED8E808229971B500F6DB61 /* MapPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E807229971B500F6DB61 /* MapPinTests.swift */; };
+		5ED8E80A229974FE00F6DB61 /* EScooterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E809229974FE00F6DB61 /* EScooterViewModelTests.swift */; };
 		5ED8E80C2299824100F6DB61 /* ScooterLoaderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8E80B2299824100F6DB61 /* ScooterLoaderViewTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		5ED8E80022996B8D00F6DB61 /* EScooterServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterServiceTests.swift; sourceTree = "<group>"; };
 		5ED8E80522996EF700F6DB61 /* TimeFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatterTests.swift; sourceTree = "<group>"; };
 		5ED8E807229971B500F6DB61 /* MapPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPinTests.swift; sourceTree = "<group>"; };
+		5ED8E809229974FE00F6DB61 /* EScooterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EScooterViewModelTests.swift; sourceTree = "<group>"; };
 		5ED8E80B2299824100F6DB61 /* ScooterLoaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterLoaderViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				5ED8E807229971B500F6DB61 /* MapPinTests.swift */,
 				5ED8E80522996EF700F6DB61 /* TimeFormatterTests.swift */,
 				5ED8E80022996B8D00F6DB61 /* EScooterServiceTests.swift */,
+				5ED8E809229974FE00F6DB61 /* EScooterViewModelTests.swift */,
 				5E39D1B82295B58F00EE6661 /* Info.plist */,
 			);
 			path = EScootersTests;
@@ -339,6 +342,7 @@
 			files = (
 				5ED8E80C2299824100F6DB61 /* ScooterLoaderViewTests.swift in Sources */,
 				5ED8E808229971B500F6DB61 /* MapPinTests.swift in Sources */,
+				5ED8E80A229974FE00F6DB61 /* EScooterViewModelTests.swift in Sources */,
 				5ED8E7FD2299657300F6DB61 /* EScooterTests.swift in Sources */,
 				5ED8E80622996EF700F6DB61 /* TimeFormatterTests.swift in Sources */,
 				5ED8E80122996B8D00F6DB61 /* EScooterServiceTests.swift in Sources */,
