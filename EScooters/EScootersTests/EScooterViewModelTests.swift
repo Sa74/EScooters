@@ -18,7 +18,6 @@ class EScooterViewModelTests: XCTestCase {
     override func setUp() {
         
         let testBundle = Bundle(for: type(of: self))
-        
         guard let path = testBundle.path(forResource: "response", ofType: "json") else { return }
         let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         eScooters = try! JSONDecoder().decode([EScooter].self, from: data)
