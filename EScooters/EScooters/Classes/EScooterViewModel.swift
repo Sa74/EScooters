@@ -22,10 +22,7 @@ class EScooterViewModel {
     init(_ eScooterService: EScooterService = EScooterService()) {
         self.eScooterService = eScooterService
     }
-}
-
-
-extension EScooterViewModel {
+    
     
     func fetchVehicles() {
         eScooterService.fetchVehiclesList { [weak self] (result) in
@@ -37,6 +34,7 @@ extension EScooterViewModel {
                 self?.eScooters = eScooters
                 
             case .failure(let error):
+                self?.eScooters = nil
                 WarningManager.createAndPushWarning(message: "\(error)", cancel: "Ok")
             }
             self?.updateHandler()
@@ -77,3 +75,4 @@ extension EScooterViewModel {
         return eScooterDetailModel
     }
 }
+
