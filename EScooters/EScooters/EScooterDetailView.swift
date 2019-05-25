@@ -86,10 +86,10 @@ class EScooterDetailView: UIView {
 
 extension UIView {
     func shake(_ duration: Double) {
-        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.y")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = duration
-        animation.values = [-10.0, 10.0, -5.0, 5.0, 0.0 ]
+        animation.values = [-15.0, 15.0, 0.0 ]
         layer.add(animation, forKey: "shake")
     }
 }
